@@ -1,0 +1,16 @@
+<h1>Pedido actual</h1>
+<table>
+    <tr>
+        <th>Referencia</th>
+        <th>Nombre</th>
+        <th>Unidades</th>
+    </tr>
+    <tr *ngFor="let pedido of pedido">
+        <td>{{pedido.producto.referencia}}</td>
+        <td>{{pedido.producto.nombre}}</td>
+        <td>
+            <button (click)="subtractUnidad(pedido)">-</button> {{pedido.unidades}}
+            <button (click)="addUnidad(pedido)">+</button>
+        </td>
+    </tr>
+</table>
