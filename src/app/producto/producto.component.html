@@ -1,0 +1,19 @@
+<h1>Lista de Productos</h1>
+
+<table>
+    <tr>
+        <th>Referencia</th>
+        <th>Nombre</th>
+        <th>Descripción</th>
+    </tr>
+    <tr *ngFor="let producto of productos">
+        <td>{{producto.referencia}}</td>
+        <td>{{producto.nombre}}</td>
+        <td>{{producto.descripcionCorta}}</td>
+        <td>
+            <nav style="text-align: center; margin-bottom: 5px;">
+                <a routerLink="/productDetail/{{producto.referencia}}">Ver más</a>
+            </nav>
+        </td>
+    </tr>
+</table>
